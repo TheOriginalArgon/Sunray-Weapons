@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Weapons -->
+<Defs>
+
+	<!-- Sunray Protector -->
+	<ThingDef ParentName="BaseGun">
+		<defName>STW_SunrayProtector</defName>
+		
+		<!-- Basic Properties -->
+		<label>sunray protector</label>
+		<description>An ancient weapon used by the legendary order of the Sunray Gem, a mighty order that disappeared centuries ago and nobody ever knew why.\n\nThis medium-sized pistol was used by temple guards and council members, it fires two small sunbolt chargues at a relatively quick speed.\nSince sunbolt chargues are extremely harmful, it is recommended to use this weapon with much caution.</description>
+		
+		<graphicData>
+			<texPath>Things/Items/Weapons/SunrayProtector</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Archotech</techLevel>
+		<tradeability>Buyable</tradeability>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		
+		<soundInteract>Interact_Autopistol</soundInteract>
+		
+		<statBases>
+			<MarketValue>1050</MarketValue>
+			<Mass>3.2</Mass>
+			<AccuracyTouch>0.8</AccuracyTouch>
+			<AccuracyShort>0.72</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.42</AccuracyLong>
+			<!-- Cooldown Time (The Circle around colonist that disallows them to move) -->
+			<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+		</statBases>
+		
+		<!-- Which kind of humans can spawn with this -->
+		<weaponTags>
+			<li>SpacerGun</li>
+		</weaponTags>
+		
+		<!-- Uses -->
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>STW_SunrayProtectorBullet</defaultProjectile>
+				<warmupTime>1.68</warmupTime>
+				<minRange>1.2</minRange>
+				<range>18.5</range>
+				<muzzleFlashScale>11</muzzleFlashScale>
+				
+				<!-- Shoot Burst -->
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
+				
+				<!-- Shooting Sound -->
+				<soundCast>Shot_Autocannon</soundCast>
+				<!-- <soundCast>STW_Sound_BurstSmall</soundCast> -->
+			</li>
+		</verbs>
+		
+		<!-- Reward -->
+		<thingSetMakerTags>
+			<li>RewardSpecial</li>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		
+		<!-- Melee Capacity -->
+		<tools>
+			<li>
+				<label>limb</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		
+	</ThingDef>
+	
+	<!-- Sunray Protector Bullet -->
+	<ThingDef ParentName="BaseBullet">
+		<defName>STW_SunrayProtectorBullet</defName>
+		
+		<!-- Basic Properties -->
+		<label>sunray protector bolt</label>
+		
+		<graphicData>
+			<texPath>Things/Projectile/SunrayProtector</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.05</drawSize>
+		</graphicData>
+		
+		<!-- Bullet Properties -->
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>22</damageAmountBase>
+			<armorPenetrationBase>0.88</armorPenetrationBase>
+			<speed>90</speed>
+			<stoppingPower>2.2</stoppingPower>
+		</projectile>
+		
+	</ThingDef>
+	
+	<!-- Sunray Blaster -->
+	<ThingDef ParentName="BaseGun">
+		<defName>STW_SunrayBlaster</defName>
+		
+		<!-- Basic Properties -->
+		<label>sunray blaster</label>
+		<description>An ancient weapon used by the legendary order of the Sunray Gem, a mighty order that disappeared centuries ago and nobody ever knew why.\n\nThis shotgun-like weapon fires a deadly concentration of sunbolt chargued pellets, perfect for armored enemies.\nSince sunbolt chargues are extremely harmful, it is recommended to use this weapon with much caution.</description>
+		
+		<graphicData>
+			<texPath>Things/Items/Weapons/SunrayBlaster</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Archotech</techLevel>
+		<tradeability>Buyable</tradeability>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		
+		<statBases>
+			<MarketValue>2600</MarketValue>
+			<Mass>5.3</Mass>
+			<AccuracyTouch>0.91</AccuracyTouch>
+			<AccuracyShort>0.82</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.38</AccuracyLong>
+			<!-- Cooldown Time (The Circle around colonist that disallows them to move) -->
+			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
+		</statBases>
+		
+		<!-- Which kind of humans can spawn with this -->
+		<weaponTags>
+			<li>SpacerGun</li>
+		</weaponTags>
+		
+		<!-- Uses -->
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>STW_SunrayBlasterBolt</defaultProjectile>
+				<warmupTime>1.18</warmupTime>
+				<minRange>1.95</minRange>
+				<range>17.2</range>
+				<muzzleFlashScale>20</muzzleFlashScale>
+				
+				<!-- Shooting Sound -->
+				<soundCast>Shot_SniperRifle</soundCast>
+				<!-- <soundCast>STW_Sound_BurstMedium</soundCast> -->
+			</li>
+		</verbs>
+		
+		<!-- Reward -->
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		
+		<!-- Melee Capacity -->
+		<tools>
+			<li>
+				<label>limb</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		
+	</ThingDef>
+	
+	<!-- Sunray Blaster Bullet -->
+	<ThingDef ParentName="BaseBullet">
+		<defName>STW_SunrayBlasterBolt</defName>
+		
+		<!-- Basic Properties -->
+		<label>sunray blaster bolt</label>
+		
+		<graphicData>
+			<texPath>Things/Projectile/SunrayBlaster</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.05</drawSize>
+		</graphicData>
+		
+		<!-- Bullet Properties -->
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>45</damageAmountBase>
+			<armorPenetrationBase>1.35</armorPenetrationBase>
+			<speed>88</speed>
+			<stoppingPower>4</stoppingPower>
+		</projectile>
+		
+	</ThingDef>
+	
+	<!-- Sunray Charguer -->
+	<ThingDef ParentName="BaseGun">
+		<defName>STW_SunrayCharguer</defName>
+		
+		<!-- Basic Properties -->
+		<label>sunray charguer</label>
+		<description>An ancient weapon used by the legendary order of the Sunray Gem, a mighty order that disappeared centuries ago and nobody ever knew why.\n\nThis heavy machine gun-like weapon can deal lots of damage in a short period of time, however, it requires high ability to be accurate.\nSince sunbolt chargues are extremely harmful, it is recommended to use this weapon with much caution.</description>
+		
+		<graphicData>
+			<texPath>Things/Items/Weapons/SunrayCharguer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Archotech</techLevel>
+		<tradeability>Buyable</tradeability>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		
+		<statBases>
+			<MarketValue>3350</MarketValue>
+			<Mass>7.3</Mass>
+			<AccuracyTouch>0.25</AccuracyTouch>
+			<AccuracyShort>0.42</AccuracyShort>
+			<AccuracyMedium>0.54</AccuracyMedium>
+			<AccuracyLong>0.56</AccuracyLong>
+			<!-- Cooldown Time (The Circle around colonist that disallows them to move) -->
+			<RangedWeapon_Cooldown>4.32</RangedWeapon_Cooldown>
+		</statBases>
+		
+		<!-- Which kind of humans can spawn with this -->
+		<weaponTags>
+			<li>SpacerGun</li>
+		</weaponTags>
+		
+		<!-- Uses -->
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>STW_SunrayCharguerBolt</defaultProjectile>
+				<warmupTime>2.86</warmupTime>
+				<minRange>4.22</minRange>
+				<range>29.4</range>
+				<muzzleFlashScale>17</muzzleFlashScale>
+				
+				<!-- Shoot Burst -->
+				<burstShotCount>18</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				
+				<!-- Shooting Sound -->
+				<soundCast>Shot_ChargeRifle</soundCast>
+				<!-- <soundCast>STW_Sound_BurstHeavy</soundCast> -->
+			</li>
+		</verbs>
+		
+		<!-- Reward -->
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		
+		<!-- Melee Capacity -->
+		<tools>
+			<li>
+				<label>limb</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		
+	</ThingDef>
+	
+	<!-- Sunray Charguer Bullet -->
+	<ThingDef ParentName="BaseBullet">
+		<defName>STW_SunrayCharguerBolt</defName>
+		
+		<!-- Basic Properties -->
+		<label>sunray charguer bolt</label>
+		
+		<graphicData>
+			<texPath>Things/Projectile/SunrayCharguer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.05</drawSize>
+		</graphicData>
+		
+		<!-- Bullet Properties -->
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>32</damageAmountBase>
+			<armorPenetrationBase>0.95</armorPenetrationBase>
+			<speed>92</speed>
+			<stoppingPower>3.2</stoppingPower>
+		</projectile>
+		
+	</ThingDef>
+	
+	<!-- Sunray Destroyer -->
+	<ThingDef ParentName="BaseGun">
+		<defName>STW_SunrayDestroyer</defName>
+		
+		<!-- Basic Properties -->
+		<label>sunray destroyer</label>
+		<description>An ancient weapon used by the legendary order of the Sunray Gem, a mighty order that disappeared centuries ago and nobody ever knew why.\n\nThis heavy weapon fires a massive, highly destructive sunbolt energy orb, capable of dealing massive damage and setting things on fire.\nSince sunbolt chargues are extremely harmful, it is recommended to use this weapon with much caution.</description>
+		
+		<graphicData>
+			<texPath>Things/Items/Weapons/SunrayDestroyer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Archotech</techLevel>
+		<tradeability>Buyable</tradeability>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		
+		<soundInteract>Interact_ChargeLance</soundInteract>
+		
+		<statBases>
+			<MarketValue>7785</MarketValue>
+			<Mass>11.3</Mass>
+			<AccuracyTouch>0.25</AccuracyTouch>
+			<AccuracyShort>0.42</AccuracyShort>
+			<AccuracyMedium>0.64</AccuracyMedium>
+			<AccuracyLong>0.96</AccuracyLong>
+			<!-- Cooldown Time (The Circle around colonist that disallows them to move) -->
+			<RangedWeapon_Cooldown>4.78</RangedWeapon_Cooldown>
+		</statBases>
+		
+		<!-- Which kind of humans can spawn with this -->
+		<weaponTags>
+			<li>SpacerGun</li>
+		</weaponTags>
+		
+		<!-- Uses -->
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>STW_SunrayDestroyerOrb</defaultProjectile>
+				<warmupTime>5.45</warmupTime>
+				<minRange>12.5</minRange>
+				<range>30.4</range>
+				<forcedMissRadius>0.6</forcedMissRadius>
+				<muzzleFlashScale>22</muzzleFlashScale>
+				
+				<!-- Shooting Sound -->
+				<soundCast>Mortar_LaunchA</soundCast>
+				<!-- <soundCast>STW_Sound_Orb</soundCast> -->
+			</li>
+		</verbs>
+		
+		<!-- Reward -->
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		
+		<!-- Melee Capacity -->
+		<tools>
+			<li>
+				<label>limb</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		
+	</ThingDef>
+	
+	<!-- Sunray Destroyer Orb -->
+	<ThingDef ParentName="BaseBullet">
+		<defName>STW_SunrayDestroyerOrb</defName>
+		
+		<!-- Basic Properties -->
+		<label>sunray destroyer orb</label>
+		
+		<graphicData>
+			<texPath>Things/Projectile/SunrayDestroyer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.35</drawSize>
+		</graphicData>
+		
+		<!-- Bullet Properties -->
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>60</damageAmountBase>
+			<explosionRadius>4.75</explosionRadius>
+			<speed>63</speed>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<armorPenetrationBase>1.85</armorPenetrationBase>
+		</projectile>
+		
+	</ThingDef>
+	
+
+
+</Defs>

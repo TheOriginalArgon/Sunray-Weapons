@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Sunray Tech - Weapons</name>
+	<author>Argón</author>
+	<supportedVersions><li>1.1</li><li>1.2</li></supportedVersions>
+	<packageId>Argon.STW</packageId>
+	<description>
+	A small mod that adds four new ultra-tech weapons capable of dealing massive amounts of damage.
+	</description>
+</ModMetaData>
